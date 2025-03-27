@@ -8,8 +8,8 @@ class SayaTubeUser
 
     public SayaTubeUser(string username)
     {
-        Debug.Assert(username.Length <= 100, "Panjang maksimal username adalah 100 karakter");
         Debug.Assert(username != null, "Nama Username tidak boleh null");
+        Debug.Assert(username.Length <= 100, "Panjang maksimal username adalah 100 karakter");
 
 
         Random random = new Random();
@@ -53,12 +53,6 @@ class SayaTubeUser
                 break;
             }
         }
-
-        //for(int i = 0; i < 8; i++)
-        //{
-        //    if ()
-        //    Console.WriteLine($"Video {i} judul: {uploadedVideos[i].GetTitle()}");
-        //}
     }
 }
 
@@ -71,8 +65,8 @@ class SayaTubeVideo
 
     public SayaTubeVideo(string title)
     {
-        Debug.Assert(title.Length <= 200, "Panjang maksimal judul maksimal 200 karakter");
         Debug.Assert(title != null, "Judul video tidak boleh null");
+        Debug.Assert(title.Length <= 200, "Panjang maksimal judul maksimal 200 karakter");
 
         Random random = new Random();
         this.id = random.Next(10000, 100000);
@@ -92,7 +86,7 @@ class SayaTubeVideo
                 this.playCount += playCount;
             }
         }
-        catch (Exception ex)
+        catch (OverflowException ex)
         {
             Console.WriteLine("Error, playCount overflow. Message: " + ex.Message);
         }
@@ -133,7 +127,6 @@ class Program
         SayaTubeVideo video9 = new SayaTubeVideo("Review film -- oleh Zhafran");
         SayaTubeVideo video10 = new SayaTubeVideo("Review film -- oleh Zhafran");
 
-
         video1.IncreasePlayCount(100);
         video2.IncreasePlayCount(200);
 
@@ -148,6 +141,10 @@ class Program
         user.AddVideo(video9);
         user.AddVideo(video10);
 
+        Console.WriteLine("Video 2 : ");
+        video2.PrintVideoDetails();
+
+        Console.WriteLine("\n");
         user.PrintAllVideoPlaycount();
         Console.WriteLine("Total play count: " + user.GetTotalVideoPlayCount());
     }
