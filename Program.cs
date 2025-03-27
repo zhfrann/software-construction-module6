@@ -1,4 +1,6 @@
-﻿class SayaTubeUser
+﻿using System.Diagnostics;
+
+class SayaTubeUser
 {
     private int id;
     private List<SayaTubeVideo> uploadedVideos;
@@ -6,6 +8,10 @@
 
     public SayaTubeUser(string username)
     {
+        Debug.Assert(username.Length <= 100, "Panjang maksimal username adalah 100 karakter");
+        Debug.Assert(username != null, "Nama Username tidak boleh null");
+
+
         Random random = new Random();
         this.id = random.Next(10000, 100000);
         this.Username = username;
@@ -25,6 +31,9 @@
 
     public void AddVideo(SayaTubeVideo video)
     {
+        Debug.Assert(video != null, "Video yang ditambahkan tidak boleh null");
+        Debug.Assert(video.GetPlayCount() < int.MaxValue, "Nilai playCount video melebihi maksimal int");
+
         uploadedVideos.Add(video);
     }
 
@@ -37,7 +46,19 @@
         {
             Console.WriteLine($"Video {i} judul: {video.GetTitle()}");
             i++;
+
+            if (i == 9)
+            {
+                Console.WriteLine("Maksimal video yang ditampilkan adalah 8.");
+                break;
+            }
         }
+
+        //for(int i = 0; i < 8; i++)
+        //{
+        //    if ()
+        //    Console.WriteLine($"Video {i} judul: {uploadedVideos[i].GetTitle()}");
+        //}
     }
 }
 
@@ -50,6 +71,9 @@ class SayaTubeVideo
 
     public SayaTubeVideo(string title)
     {
+        Debug.Assert(title.Length <= 200, "Panjang maksimal judul maksimal 200 karakter");
+        Debug.Assert(title != null, "Judul video tidak boleh null");
+
         Random random = new Random();
         this.id = random.Next(10000, 100000);
         this.title = title;
@@ -58,7 +82,20 @@ class SayaTubeVideo
 
     public void IncreasePlayCount(int playCount)
     {
-        this.playCount = playCount;
+        Debug.Assert(playCount <= 25000000, "Maksimal penambahan playcCount 25.000.000");
+        Debug.Assert(playCount > 0, "playCount tidak boleh negatif");
+
+        try
+        {
+            checked
+            {
+                this.playCount += playCount;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error, playCount overflow. Message: " + ex.Message);
+        }
     }
 
     public void PrintVideoDetails()
@@ -102,6 +139,14 @@ class Program
 
         user.AddVideo(video1);
         user.AddVideo(video2);
+        user.AddVideo(video3);
+        user.AddVideo(video4);
+        user.AddVideo(video5);
+        user.AddVideo(video6);
+        user.AddVideo(video7);
+        user.AddVideo(video8);
+        user.AddVideo(video9);
+        user.AddVideo(video10);
 
         user.PrintAllVideoPlaycount();
         Console.WriteLine("Total play count: " + user.GetTotalVideoPlayCount());
