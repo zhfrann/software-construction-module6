@@ -1,0 +1,15 @@
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\obj\Debug\net8.0\modul6_103022330008.GeneratedMSBuildEditorConfig.editorconfig
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\obj\Debug\net8.0\modul6_103022330008.AssemblyInfoInputs.cache
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\obj\Debug\net8.0\modul6_103022330008.AssemblyInfo.cs
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\obj\Debug\net8.0\modul6_103022330008.csproj.CoreCompileInputs.cache
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\obj\Debug\net8.0\modul6_103022330008.sourcelink.json
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\bin\Debug\net8.0\modul6_103022330008.exe
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\bin\Debug\net8.0\modul6_103022330008.deps.json
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\bin\Debug\net8.0\modul6_103022330008.runtimeconfig.json
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\bin\Debug\net8.0\modul6_103022330008.dll
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\bin\Debug\net8.0\modul6_103022330008.pdb
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\obj\Debug\net8.0\modul6_103022330008.dll
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\obj\Debug\net8.0\refint\modul6_103022330008.dll
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\obj\Debug\net8.0\modul6_103022330008.pdb
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\obj\Debug\net8.0\modul6_103022330008.genruntimeconfig.cache
+E:\Telkom University\Aset Kuliah\Semester 4\Praktikum KPL\Modul 6\modul6_103022330008\obj\Debug\net8.0\ref\modul6_103022330008.dll
